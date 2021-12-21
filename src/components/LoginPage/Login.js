@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import { FiMail } from "react-icons/fi";
 import { FiLock } from "react-icons/fi";
 import './login.css'
@@ -26,6 +27,7 @@ function Login() {
                              <FiLock />  
                             <input className='password' type="password" placeholder='Password' />
                         </div>
+                        <p className='linkptag'><a href="#">Forgot Password ?</a></p>
                         <button className='loginbtn'>Login</button>
                     </div>
                     <h3>Or</h3>
@@ -35,7 +37,7 @@ function Login() {
                     <a href="#" class="fb btn">
                         <i class="fab fa-facebook-f"></i>  Login with Facebook
                     </a>
-                    <p style={{"position" : "relative", "top" : "20px", "fontSize" : "12px"}}>Not a user <a href="">Signup</a> </p>
+                    <p style={{"position" : "relative", "top" : "20px", "fontSize" : "12px"}}>Not a user <Link to = "/register">Signup</Link> </p>
                 </div>
             </div>
         </div>

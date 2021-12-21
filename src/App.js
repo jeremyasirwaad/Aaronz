@@ -7,15 +7,23 @@ import {
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/LoginPage/Login";
+import Register from "./components/Register/Register"
 
 function App() {
   return (
-    <Router>
       <div className="App">
+        <Router>
           <Navbar />
-          <Login />
+           <Switch>
+             <Route exact path="/"> 
+                <Login /> 
+             </Route>
+             <Route exact path="/register"> 
+                <Register /> 
+             </Route>
+            </Switch>
+        </Router>
       </div>
-    </Router>
   );
 }
 
