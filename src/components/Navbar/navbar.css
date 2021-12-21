@@ -1,0 +1,18 @@
+.navbarpage{
+    height: 80px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.navbarcontainer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.aazronzlogo{
+    height: 65px;
+    width: auto;
+    margin-left: 50px;
+}
