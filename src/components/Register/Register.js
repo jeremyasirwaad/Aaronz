@@ -16,7 +16,7 @@ function Register() {
                 <div className="logininfo">
                     <div className="logintext">
                         <h1><span className='weare'>We Are</span><span className='aazons' style={{"color" : "#0916c8"}}> Aaronz Connect</span></h1>
-                        <p>Welcome to Aaronz family, Lets Get Started</p>
+                        <p>Welcome to Aaronz family, Lets Get Started!</p>
                     </div>
                     <div className="logincreds">
                     <h1 className='signupname'>Sign Up</h1>
