@@ -1,0 +1,8 @@
+
+
+.dashboardgrid{
+    display: flex;
+    margin-top: 80px;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 80px);
+}

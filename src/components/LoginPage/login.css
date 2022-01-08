@@ -11,7 +11,7 @@
 
 .logincontainer{
     display: flex;
-    height: 600px;
+    height: 650px;
     width: 800px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -88,6 +88,17 @@
     justify-content: center;
     align-items: center;
     margin-right: 50px;
+
+}
+
+.emaildiv1,.passworddiv1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    position: relative;
+    bottom: 30px;
 }
 
 .loginbtn{
@@ -101,6 +112,21 @@
     margin-right: 35px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.loginbtn1{
+    border: none;
+    color: white;
+    background-image: linear-gradient(to right, rgb(15, 74, 168) , rgb(11, 46, 160));
+    outline: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 80px;
+    margin-right: 35px;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+    bottom: 30px;
 }
 
 .signupname{
@@ -140,4 +166,10 @@
     color: white;
   }
 
-  
+  .errormsg{
+      position: relative;
+      right: 20px;
+      bottom: 20px;
+      color: red;
+  }
+
