@@ -5,7 +5,16 @@ import { Sidenav } from '../SideNav/Sidenav'
 export const LandingDash = () => {
     return (
         <div className='landingdash'>
-            <h1>This is dash LandingDash</h1>
+            <span>DashBoard</span>
+            <div className="dashgridcontainer">
+                <div className="submitrequest">
+
+                </div>
+                <div className="requestrecieved">
+
+                </div>
+                    
+            </div>
         </div>
     )
 }

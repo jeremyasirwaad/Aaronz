@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Viewreqcard/viewcard.css'
 import stairs from './man-climbing-stairs.png' 
 export const Viewcard2 = (props) => {
+
+    const [like, setLike] = useState(parseInt(props.Likes));
+    const [liketrue, setLiketrue] = useState(true);
+
+    const likeonclick = () => {
+        if(liketrue === true)
+        {
+        setLike(like+1);
+        }
+        if(liketrue === false)
+        setLike(like-1);
+    }   
+
+
     return (
 <div className='cardcontainer1'>
         <div className='infocontainer'> 
@@ -33,10 +47,10 @@ export const Viewcard2 = (props) => {
             </div>
         </div>
         <div className="likecomment">
-            <div className="likebtn">
+            <div className="likebtn" onClick={() => { likeonclick();  setLiketrue(!liketrue)}}>
                 <i class='bx bxs-like'></i>
-                <span>{props.Likes}</span>
-                {/* <span>Likes</span> */}
+                <span>{like}</span>
+
             </div>
             <div className="commentbtn">
                 <i class='bx bxs-chat' ></i>

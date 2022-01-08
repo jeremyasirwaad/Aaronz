@@ -47,7 +47,7 @@ const Viewrequest = () => {
                             </div>
                             <div className={ sentorrecieve ? "gridres none" : "gridres" }>
                                 <Viewcard2 Likes = '2' Date = "31/4" budget = "85000" Name = "The Tower" Bedrooms = "1" Maid = "Yes"  />
-                                <Viewcard2 Likes = "4" Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"  />
+                                <Viewcard2 Likes = '4' Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"  />
                                 <Viewcard2 Likes = '8'  Date = "17/8" budget = "35000" Name = "Marina" Bedrooms = "2" Maid = "Yes"  />  
                             </div>
                         </div>
