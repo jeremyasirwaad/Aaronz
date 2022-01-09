@@ -28,7 +28,7 @@ export const Sidenav = () => {
             <div className="sidenavlinks">
             <div className="Result links">
                      <i class='bx bxs-dashboard'></i>
-                     <span onClick={() => { history.push('/dashboard') }}>Dashboard</span>
+                     <span onClick={() => { history.push('/dashboard') }}>HomePage</span>
                 </div>
                 <div className="Request noselect">
                     <div className = "links">

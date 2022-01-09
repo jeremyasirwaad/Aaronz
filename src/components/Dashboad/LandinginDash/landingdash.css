@@ -1,4 +1,34 @@
 .landingdash{
     margin-top: 80px;
     margin-left: 300px;
+    margin-bottom: 100px;
+}
+
+.hometitle{
+    font-size: 30px;
+    margin-left: 40px;
+    font-weight: 600;
+
+}
+
+.landingdashcontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.today,.Yesterday,.Lastthreedays{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homesubtitle span{
+    font-size: 20px;
+    font-weight: 600;
 }
