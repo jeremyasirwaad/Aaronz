@@ -1,11 +1,12 @@
 import React from 'react'
 import './viewcard.css'
 import stairs from './man-climbing-stairs.png'
+import profilelogo from './User-Profile-PNG-High-Quality-Image.png'
 const Landingcard = (props) => {
     return (
        <div className='cardcontainer'>
        <div className="circle">
-           <span>{props.Date}</span>
+             <img src={profilelogo} alt="" />
        </div>
        <div className="rectangle">
            <div className="cardtextcontainer">

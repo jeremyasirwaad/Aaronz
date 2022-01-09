@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 
 .cardcontainer1{
@@ -44,10 +44,15 @@
     z-index: 2;
 }
 
+.circle img{
+    height: 100%;
+    width: 100%;
+}
+
 .rectangle{
     position: relative;
     right: 25px;
-    width: 85%;
+    width: 95%;
     display: flex;
     height: 80px;
     /* background-color: tomato; */
