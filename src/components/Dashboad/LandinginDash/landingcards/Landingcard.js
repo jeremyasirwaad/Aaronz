@@ -1,5 +1,5 @@
 import React from 'react'
-import './viewcard.css'
+import './viewcardhome.css'
 import stairs from './man-climbing-stairs.png'
 import profilelogo from './User-Profile-PNG-High-Quality-Image.png'
 const Landingcard = (props) => {

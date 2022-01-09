@@ -1,9 +1,14 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import './landingdash.css'
 import { Sidenav } from '../SideNav/Sidenav'
 import Landingcard from './landingcards/Landingcard'
 
 export const LandingDash = () => {
+
+    const [today, setToday] = useState(true);
+    const [yesterday, setYesterday] = useState(true);
+    const [last3days, setLast3days] = useState(true);
+
     return (
         <div className='landingdash'>
             <span className='hometitle'>HomePage</span>
