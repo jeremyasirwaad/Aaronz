@@ -4,8 +4,6 @@
 .submitreqpage{
     font-family: 'Poppins', sans-serif;
     margin-left: 300px;
-    width: calc(100vw - 300px);
-    height: calc(100vh - 80px);
     /* background-color: chartreuse; */
     display: flex;
     /* justify-content: center; */

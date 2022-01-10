@@ -1,9 +1,7 @@
 .viewreqcard{
     font-family: 'Poppins', sans-serif;
-    margin-left: 300px;
     margin-top: 80px ;
-    width: calc(99vw - 300px);
-    height: calc(97vh - 80px);
+    margin-left: 300px;
     background-color: rgb(255, 255, 255);
 }
 
