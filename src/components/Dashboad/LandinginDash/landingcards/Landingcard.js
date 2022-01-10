@@ -26,11 +26,11 @@ const Landingcard = (props) => {
                    </div>
                </div>
            </div>
-           <div className="grey">
-               <span>Agent Info</span>
-               <span>Mr.Jikku Luke</span>
+           <div className="grey1">
+               <span>Express</span>
+               <span>Interest</span>
            </div>
-           <div className="grey">
+           <div className="grey2">
                <span>Decline</span>
                <span>Suggestion</span>
            </div>

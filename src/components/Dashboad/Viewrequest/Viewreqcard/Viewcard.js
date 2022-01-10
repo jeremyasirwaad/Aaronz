@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import  stairs  from './man-climbing-stairs.png'
 import './viewcard.css'
 const Viewcard = (props) => {
+
+    const [declinestate, setDeclinestate] = useState(true);
+
+    const managedstate = () => {
+        props.getBack(declinestate,props);
+    }
+
     return (
         <div className='cardcontainer'>
             <div className="circle">
@@ -25,9 +32,13 @@ const Viewcard = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="grey">
-                    <span>ADE</span>
-                    <span>{ props.budget }</span>
+                <div className="grey4">
+                    <span>Push</span>
+                    <span>Again</span>
+                </div>
+                <div className="grey3" onClick={() => { managedstate(); }}>
+                    <span>Request</span>
+                    <span>Closed</span>
                 </div>
             </div>
         </div>
