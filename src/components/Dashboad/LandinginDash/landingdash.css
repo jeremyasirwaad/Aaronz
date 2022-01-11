@@ -131,19 +131,14 @@
 }
 
 .asdf{
-    position: relative;
-    top: 60px;
-    left: 30px;
+    position: absolute;
+    top: 30%;
+    left: 32%;
     font-weight: 600;
     font-size: 20px;
 }
 
-.asdfbtn{
-    width: 100px;
-    position: absolute;
-    bottom: 27%;
-    right: 40%;
-}
+
 
 .colorline{
     height: 10px;

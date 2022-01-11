@@ -1,175 +1,22 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
-
-.loginpage{
-    height: calc(100vh - 80px);
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ .loginpage{
+    margin-top: 80px;
 }
-
+/*
 .logincontainer{
     display: flex;
-    height: 650px;
-    width: 800px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100vw;
+    height: calc(100vh - 80px);
 }
 
-.loginimgcontainer{
-
+.loginimgdiv
+{
+    width: 40%;
     height: 100%;
-    width: 35%;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./1622991708860.jpg');
-
+    background-color: blue;
 }
 
-.loginimg1container{
-
+.logincreddiv{
+    width: 60%;
     height: 100%;
-    width: 35%;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../Register/burj-al-arab-profile-exterior_6-4_landscape__portrait.webp');
-
-}
-
-.logininfo{
-    height: 100%;
-    width: 65%;
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-    /* background-color: chocolate; */
-}
-
-.logininfo h1 {
-    font-size: 28px;
-}
-
-.logintext{
-    margin-top: 50px;
-    width: 100%;
-    margin-left: 40px;
-}
-
-.weare{
-    opacity: 0.5;
-}
-
-
-
-.logincreds{
-    margin-top: 5px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 30px;
-}
-
-.email,.password{
-    width: 70%;
-    margin: 10px;
-    height: 30px;
-    border: none;
-    outline: none;
-    border-bottom:rgb(0, 0, 0) 1px solid;
-}
-
-.emaildiv,.passworddiv{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
-
-}
-
-.emaildiv1,.passworddiv1{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
-    position: relative;
-    bottom: 30px;
-}
-
-.loginbtn{
-    border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(15, 74, 168) , rgb(11, 46, 160));
-    outline: none;
-    border-radius: 5px;
-    height: 35px;
-    width: 80px;
-    margin-right: 35px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.loginbtn1{
-    border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(15, 74, 168) , rgb(11, 46, 160));
-    outline: none;
-    border-radius: 5px;
-    height: 35px;
-    width: 80px;
-    margin-right: 35px;
-    margin-top: 20px;
-    cursor: pointer;
-    position: relative;
-    bottom: 30px;
-}
-
-.signupname{
-    margin-right: 40px;
-}
-
-.linkptag{
-    font-size: 14px;
-    margin-right: 35px;
-}
-
-.btn {
-    width: 50%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin: 5px 0;
-    opacity: 0.85;
-    display: inline-block;
-    font-size: 15px;
-    line-height: 20px;
-    text-decoration: none; /* remove underline from anchors */
-    margin-right: 10px;
-  }
-  input:hover,
-.btn:hover {
-  opacity: 1;
-}
-
-.google {
-    background-color: #dd4b39;
-    color: white;
-  }
-
-  .fb {
-    background-color: #3B5998;
-    color: white;
-  }
-
-  .errormsg{
-      position: relative;
-      right: 20px;
-      bottom: 20px;
-      color: red;
-  }
-
+    background-color: blueviolet;
+} */
