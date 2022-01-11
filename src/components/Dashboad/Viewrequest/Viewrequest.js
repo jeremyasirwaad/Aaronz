@@ -6,6 +6,7 @@ import { Viewcard2 } from './Viewreqcard2/Viewcard2'
 import { useState } from 'react'
 const Viewrequest = () => {
 
+   
     const [sentorrecieve, setSentorrecieve] = useState(true);
     const [delstate, setDelstate] = useState(false);
     const managesentor = () => {
@@ -22,10 +23,13 @@ const Viewrequest = () => {
             setDelstate(declinestate);
             console.log(declineprops);
     }
+  
 
     const manageclosedelstate = () => {
         setDelstate(false);
     }
+
+
 
     return (
         <div>
@@ -70,6 +74,7 @@ const Viewrequest = () => {
                     <button onClick={() => { manageclosedelstate(); } }>Submit</button>
                 </div>
             </div>
+
             </div>
         </div>
     )

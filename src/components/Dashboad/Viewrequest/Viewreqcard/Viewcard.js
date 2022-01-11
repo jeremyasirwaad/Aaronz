@@ -9,6 +9,7 @@ const Viewcard = (props) => {
         props.getBack(declinestate,props);
     }
 
+
     return (
         <div className='cardcontainer'>
             <div className="circle">

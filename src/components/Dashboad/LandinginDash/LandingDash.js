@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 import './landingdash.css'
-import { Sidenav } from '../SideNav/Sidenav'
+
 import Landingcard from './landingcards/Landingcard'
 
 export const LandingDash = () => {
@@ -8,6 +8,18 @@ export const LandingDash = () => {
     const [today, setToday] = useState(true);
     const [yesterday, setYesterday] = useState(true);
     const [last3days, setLast3days] = useState(true);
+
+    const [infostate, setInfostate] = useState(false);
+    const [moreinfo, setMoreinfo] = useState({});
+
+    const managemoreinfo = (infostate,moreinfo) =>{
+        setInfostate(infostate);
+        setMoreinfo(moreinfo);
+    }
+
+    const moreinfoclose = () => {
+        setInfostate(false);
+    }
 
     return (
         <div className='landingdash'>
@@ -22,8 +34,8 @@ export const LandingDash = () => {
                         <span>Today</span>
                         <i class='bx bxs-down-arrow' style={{ "marginLeft": "10px"}}></i>
                     </div>
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
 
                 </div>
                 <div className="Yesterday">
@@ -31,9 +43,9 @@ export const LandingDash = () => {
                         <span>Yesterday</span>
                         <i class='bx bxs-down-arrow' style={{ "marginLeft": "10px"}}></i>
                     </div>
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes" />
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes" />
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes" />
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes" />
                     
 
                 </div>
@@ -42,9 +54,30 @@ export const LandingDash = () => {
                         <span>Last Three Days</span>
                         <i class='bx bxs-down-arrow' style={{ "marginLeft": "10px"}}></i>
                     </div>
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
-                    <Landingcard Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
+                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
+                </div>
+            </div>
+            <div className={ infostate ? "declinemodelinfo" : "declinemodelinfo declinemodelcloseinfo"}>
+                <div className="dmodelinfo">
+                    <div className="colorline"></div>
+                    <i class="fas fa-times closebtninfo" onClick={() => { moreinfoclose(); } }></i>
+                        <div className='asdf'><span className='moreinfotitle'>Property Details:</span></div>
+                        <div className='moreinfocontainer'>
+                        <div className='moreinfo1'>
+                            <span className='subinfos'>Name:   <span className='subinfos1'>{moreinfo.Name}</span></span>
+                            <span className='subinfos'>Budget:  <span className='subinfos1'>{moreinfo.budget}</span></span>
+                            <span className='subinfos'>Bedrooms:   <span className='subinfos1'>{moreinfo.Bedrooms}</span></span>
+                            <span className='subinfos'>Maid:  <span className='subinfos1'>{moreinfo.Maid}</span></span> 
+                        </div>
+                        <div className='moreinfo2'>
+                            <span className='subinfos'>Name:   <span className='subinfos1'>{moreinfo.Name}</span></span>
+                            <span className='subinfos'>Budget:  <span className='subinfos1'>{moreinfo.budget}</span></span>
+                            <span className='subinfos'>Bedrooms:   <span className='subinfos1'>{moreinfo.Bedrooms}</span></span>
+                            <span className='subinfos'>Maid:  <span className='subinfos1'>{moreinfo.Maid}</span></span> 
+                        </div>
+                        </div>
                 </div>
             </div>
         </div>

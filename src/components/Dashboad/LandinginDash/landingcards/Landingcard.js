@@ -3,13 +3,18 @@ import './viewcardhome.css'
 import stairs from './man-climbing-stairs.png'
 import profilelogo from './User-Profile-PNG-High-Quality-Image.png'
 const Landingcard = (props) => {
+
+    const onrectclick = () => {
+        props.getBack(true,props);
+    }
+
     return (
        <div className='cardcontainer'>
        <div className="circle">
              <img src={profilelogo} alt="" />
        </div>
        <div className="rectangle">
-           <div className="cardtextcontainer">
+           <div className="cardtextcontainer" onClick={() => { onrectclick(); }}>
                <span className='propertyname'>{ props.Name }</span>
                <div className="props">
                    <div className="bedroom">
