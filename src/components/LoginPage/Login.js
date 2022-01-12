@@ -54,15 +54,27 @@ function Login() {
 
     return (
         <div className='loginpage'>
-            {/* <div className="logincontainer">
+            <div className="logincontainer">
                     <div className="loginimgdiv">
 
                     </div>
                     <div className="logincreddiv">
-
+                        <div className="Logincontainer">
+                            <div className="logintitlediv">
+                                <span>LoginIn</span>
+                            </div>
+                            <div className="username">
+                                <span>Email:</span>
+                                <input type="text" />
+                            </div>
+                            <div className="password">
+                                <span>Password:</span>
+                                <input type="password" />
+                            </div>
+                            <button>Login</button>
+                        </div>
                     </div>
-            </div> */}
-            <span>hello</span>
+            </div>
         </div>
     )
 }

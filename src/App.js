@@ -13,8 +13,9 @@ import forsale from "./components/Dashboad/forsale/forsale";
 import Forrent from "./components/Dashboad/forrent/Forrent";
 import Viewrequest from "./components/Dashboad/Viewrequest/Viewrequest";
 import { Sidenav } from './components/Dashboad/SideNav/Sidenav'
-
-
+import  MyProfile  from './components/Dashboad/myProfile/MyProfile'
+import AgentTools from './components/Dashboad/AgentTools/AgentTools'
+import PropReqScreen from './components/Dashboad/propReqScreen/PropReqScreen'
 
 function App() {
   return (
@@ -26,9 +27,12 @@ function App() {
              <Route exact path = "/dashboard" component={LandingDash}></Route>
              <Route exact path = "/dashboard/Submitreq" component={ SubmitReq }></Route>
              <Route exact path = "/register" component={ Register }></Route>
-             <Route exact path = "/dashboard/forsale" component={ forsale }></Route>
+             <Route exact path = "/dashboard/forsale" component={ PropReqScreen }></Route>
              <Route exact path = "/dashboard/forrent" component={ Forrent }></Route>
              <Route exact path = "/dashboard/viewreq" component={ Viewrequest }></Route>
+             <Route exact path = "/dashboard/myprofile" component={ MyProfile }></Route>
+             <Route exact path = "/dashboard/commissioncal" component={ AgentTools }></Route>
+
       </div>
   );
 }

@@ -56,11 +56,11 @@ export const Sidenav = () => {
                 <div className="Request noselect">
                     <div className = "links">
                         <i onClick={() => { toggle2(); }} class='bx bx-repost' ></i>
-                        <span onClick={() => { toggle2(); }}>Agent Tools</span>
+                        <span onClick={() => { toggle2();  }}>Agent Tools</span>
                         <i class= { active2 ? 'bx bx-chevron-down downi' : 'bx bx-chevron-down downi rotate'} style={{"fontSize":"22px"}} onClick={() => { toggle2(); } }></i>
                     </div>
                     <div className= { active2 ? "sublinks close noselect" : "sublinks noselect" }>
-                        <span className='kka'>Commission Calculator</span>
+                        <span className='kka' onClick={() => { history.push('/dashboard/commissioncal') } }>Commission Calculator</span>
                     </div>
                 </div>            
                 <div className="Convo links">

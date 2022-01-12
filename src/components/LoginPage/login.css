@@ -1,7 +1,12 @@
  .loginpage{
-    margin-top: 80px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    height: 100%;
+    margin-top: 52px;
 }
-/*
+
+
 .logincontainer{
     display: flex;
     width: 100vw;
@@ -18,5 +23,24 @@
 .logincreddiv{
     width: 60%;
     height: 100%;
-    background-color: blueviolet;
-} */
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.Logincontainer{
+    height: 50%;
+    width: 70%;
+    background-color: chocolate;
+}
+
+.username, .password{
+    display: flex;
+    flex-direction:column;
+}
+
+.username, .password,.logintitlediv{
+    height: 25%;
+    width: 60%;
+}

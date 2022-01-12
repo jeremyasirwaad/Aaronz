@@ -3,9 +3,38 @@ import './Viewrequest.css'
 import { Sidenav } from '../SideNav/Sidenav'
 import Viewcard from './Viewreqcard/Viewcard'
 import { Viewcard2 } from './Viewreqcard2/Viewcard2'
+// import stairs from "./man-climbing-stairs.png";
+// import profilelogo from "./User-Profile-PNG-High-Quality-Image.png";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import Avatar from "@mui/material/Avatar";
+import WhatsappRoundedIcon from "@mui/icons-material/WhatsappRounded";
+import { Card } from "@mui/material";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 import { useState } from 'react'
 const Viewrequest = () => {
 
+    const style = {
+        display: "flex",
+        flexDirection: "column",
+        position: "absolute",
+        justifyContent: "center",
+        alignItems: "center",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: 500,
+     
+        bgcolor: "background.paper",
+     
+        boxShadow: 24,
+        p: 4,
+     };
    
     const [sentorrecieve, setSentorrecieve] = useState(true);
     const [delstate, setDelstate] = useState(false);
@@ -58,22 +87,38 @@ const Viewrequest = () => {
                         </div>
                     </div>
                 </div>
-                <div className={ delstate ? "declinemodel" : "declinemodel declinemodelclose"}>
-                <div className="dmodel">
-                <i class="fas fa-times closebtn" onClick={() => { manageclosedelstate(); } }></i>
-                    <span>Reason For Closure</span>
-                        <select name="reasonforclosure" id="" className='reasonfordecline'>
-                            <option value="" disabled selected hidden>Select An Option</option>
-                            <option value="">Deal done within Aaronz</option>
-                            <option value="">No one has responded</option>
-                            <option value="">No one has responded</option>
-                            <option value="">Deal done outside Aaronz</option>
-                            <option value="">Property not with me anymore</option>
-                            <option value="">Others</option>
-                        </select>
-                    <button onClick={() => { manageclosedelstate(); } }>Submit</button>
-                </div>
-            </div>
+                <Modal
+               className="modal-for-decline"
+               open={delstate}
+               onClose={manageclosedelstate}
+               aria-labelledby="modal-modal-title"
+               aria-describedby="modal-modal-description"
+            >
+               <Box sx={style}>
+                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                     Please select a Reason for decline
+                  </Typography>
+                  <FormControl sx={{ m: 1, minWidth: 150 }}>
+                     <InputLabel id="demo-simple-select-autowidth-label" style = {{ "marginTop" : "10px"}}>Choose</InputLabel>
+                     <Select
+                        labelId="demo-simple-select-autowidth-label"
+                        id="demo-simple-select-autowidth"
+                        // value={select}
+                        // onChange={handleChangefordel}
+                        autoWidth
+                        label="Age"
+                     >
+                        <MenuItem value={10}>Deal done within Aaronz</MenuItem>
+                        <MenuItem value={21}>No one has responded</MenuItem>
+                        <MenuItem value={22}>Deal done outside Aaronz</MenuItem>
+                        <MenuItem value={22}>Property not with me anymore</MenuItem>
+                        <MenuItem value={22}>Others</MenuItem>
+                     </Select>
+
+                     <Button variant="contained" style={{marginTop:"10px"}}>Done</Button>
+                  </FormControl>
+               </Box>
+            </Modal>
 
             </div>
         </div>
