@@ -1,46 +1,4 @@
- .loginpage{
-    margin: 0px;
-    padding: 0px;
-    box-sizing:border-box;
-    height: 100%;
-    margin-top: 52px;
-}
-
-
-.logincontainer{
-    display: flex;
-    width: 100vw;
-    height: calc(100vh - 80px);
-}
-
-.loginimgdiv
-{
-    width: 40%;
-    height: 100%;
-    background-color: blue;
-}
-
-.logincreddiv{
-    width: 60%;
-    height: 100%;
- 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
-
-.Logincontainer{
-    height: 50%;
-    width: 70%;
-    background-color: chocolate;
-}
-
-.username, .password{
-    display: flex;
-    flex-direction:column;
-}
-
-.username, .password,.logintitlediv{
-    height: 25%;
-    width: 60%;
+.signupsize{
+    margin-top: 64px;
+    height: calc(100vh - 64px);
 }

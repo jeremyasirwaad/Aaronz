@@ -1,113 +1,139 @@
-import React, { useState } from 'react'
-import { useHistory } from "react-router-dom";
-import "../LoginPage/login.css"
-import { Link } from 'react-router-dom';
-import { FiMail } from "react-icons/fi";
-import { FiLock } from "react-icons/fi";
-import { FiPhone } from "react-icons/fi";
-import { FiUserCheck } from "react-icons/fi";
-import axios from 'axios';
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useHistory } from 'react-router-dom';
 
 
-function Register() {
+function Copyright(props) {
 
+    
+  return (
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" href="https://aaronz.co/">
+        Aaronz
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
+
+const theme = createTheme();
+
+export default function SignUp() {
     const history = useHistory();
 
-    const [errormsg, setErrormsg] = useState("");
-    const [user, setUser] = useState({
-        name: "",
-        email:'',
-        number:'',
-        password:'',
-        repassword: ''
-    })
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    // eslint-disable-next-line no-console
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
 
-    const onchangehandler = (e) => {
-        const {name,value} = e.target
-        setUser({...user,
-            [name]: value
-        })
- 
-    }
+  return (
+    <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 15,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign up
+          </Typography>
+          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="given-name"
+                  name="firstName"
+                  required
+                  fullWidth
+                  id="firstName"
+                  label="First Name"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="lastName"
+                  label="Last Name"
+                  name="lastName"
+                  autoComplete="family-name"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <FormControlLabel
+                  control={<Checkbox value="allowExtraEmails" color="primary" />}
+                  label="I want to receive inspiration, marketing promotions and updates via email."
+                />
+              </Grid>
+            </Grid>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign Up
+            </Button>
+            <Grid container justifyContent="flex-end">
+              <Grid item>
+                <Link href='' onClick={() => { history.push('/login'); }} variant="body2">
+                  Already have an account? Sign in
+                </Link>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+        <Copyright sx={{ mt: 5 }} />
+      </Container>
+    </ThemeProvider>
 
-    const post = async () => {
-        if(!user.name){
-            setErrormsg("Enter Name!");
-            return 0;
-        }
-        if(!user.email){
-            setErrormsg("Enter Email!");
-            return 0;
-        }
-        if(!user.password){
-            setErrormsg("Enter Password!");
-            return 0;
-        }
-        if(user.password !== user.repassword){
-            setErrormsg("Passwords Doesnt Match");
-            return 0;
-        }
-        // const result = await axios.post("http://localhost:3001/user/register", user);
-        const result = await fetch("http://localhost:3001/user/register", { method: "POST", headers: { 'Content-type': 'application/json' }, 
-        body: JSON.stringify ({ 
-            name: user.name,
-            email: user.email,
-            password: user.password,
-            number: user.number
-         })
-    })
-    .then(res => res.json());
-        setErrormsg(result.message);
-        if(result.status === 'error'){
-            setErrormsg(result.message);
-            return 0;
-        }
-        history.push("/");
-
-    }
-
-    return (
-        <div className='loginpage'>
-            <div className="logincontainer">
-                <div className="loginimg1container">
-
-                </div>
-                <div className="logininfo">
-                    <div className="logintext">
-                        <h1><span className='weare'>We Are</span><span className='aazons' style={{"color" : "#0916c8"}}> Aaronz Connect</span></h1>
-                        <p>Welcome to Aaronz family, Lets Get Started!</p>
-                    </div>
-                    <div className="logincreds">
-                    <h1 className='signupname'>Sign Up</h1>
-                    <p className='errormsg' style={{ "color" : "red"}}>{ errormsg }</p>
-                        <div className="emaildiv1">
-                            <FiUserCheck /> 
-                            <input className='email' name = 'name' type="text" placeholder='Name'  onChange={ onchangehandler }/>
-                        </div>
-                        <div className="emaildiv1">
-                            <FiMail /> 
-                            <input className='email' name = 'email' type="text" placeholder='Email'  onChange={ onchangehandler }/>
-                        </div>
-                        <div className="passworddiv1">
-                            <FiPhone />  
-                            <input placeholder='Phone' className='password' type="tel" id="phone" onChange={ onchangehandler } name="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input>
-                        </div>
-                        <div className="passworddiv1">
-                            <FiLock />  
-                            <input className='password' name='password' type="password" onChange={ onchangehandler } placeholder='Password' />
-                        </div>
-                        <div className="passworddiv1">
-                            <FiLock />  
-                            <input className='password' name='repassword' type="password" onChange={ onchangehandler } placeholder='Re-Password' />
-                        </div>
-                        <button className='loginbtn1' onClick={() => {post(); }}>SignUp</button>
-                        <p style={{"marginRight" : "30px", "marginTop" : "40px", "fontSize" : "14px", "position" : "relative", "bottom" : "30px"}}>Already a member, <Link to = "/">Login</Link> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
- }
-
-
-export default Register
+  );
+}

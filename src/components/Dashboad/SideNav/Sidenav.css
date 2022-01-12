@@ -6,14 +6,28 @@
     font-family: 'Poppins', sans-serif;
 
     position: fixed;
-    top: 80px;
+    top: 64px;
     left: 0px;
     height: 100%;
     width: 300px;
     background-color: #11101d;
     box-shadow: rgba(2, 1, 1, 0.2) 0px 7px 29px 0px;
+    overflow-y: auto;
 
+}
 
+.sidebar::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+
+}
+.sidebar::-webkit-scrollbar-thumb{
+    border-radius: 120vw;
+    background-color: rgb(92, 92, 92);
+}
+
+.sidebar::-webkit-scrollbar-track{
+    background-color: rgb(255, 255, 255);
 }
 
 .logodetails{
@@ -40,6 +54,7 @@
 .sidenavlinks{
     display: flex;
     flex-direction: column;
+    
 }
 
 .downi{

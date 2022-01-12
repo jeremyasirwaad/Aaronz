@@ -11,7 +11,7 @@ const PropReqScreen = () => {
       <div>
          <div className="Postrequestsell">
             <div className="containerforsell">
-               <div className="mypostbgcontainer">
+               <div className="mypostbgcontainer" style={{ "marginTop" : "120px" }}>
                   <div className="mypostcontainer">
                      <h1>Property Request</h1>
                      <div className="jobrequirements">
