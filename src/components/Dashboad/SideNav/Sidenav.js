@@ -69,7 +69,11 @@ export const Sidenav = () => {
                      <span>Conversations</span>
                 </div>
             </div>
-
+            <div className="accountdiv">
+            <i class='bx bx-user-circle' onClick={() => { history.push('/dashboard/myprofile')}}></i>
+            <span>Jeremy Asirwaad</span>
+            <i class='bx bx-log-out' onClick={() => { history.push('/') }}></i>
+            </div>
         </div>
     )
 }
