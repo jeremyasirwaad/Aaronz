@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Register from "./components/Register/Register"
-import { Landing } from "./components/Landing/Landing";
+import Landing from "./components/Landing/Landing"
 import { LandingDash } from "./components/Dashboad/LandinginDash/LandingDash"
 import { SubmitReq } from "./components/Dashboad/submitreq/SubmitReq"
 import Forrent from "./components/Dashboad/forrent/Forrent";
