@@ -1,9 +1,18 @@
 import React from 'react'
 
-export const Landing = () => {
-    return (
-        <div>
-            <h1>This is landing</h1>
-        </div>
-    )
+const Landing = () => {
+
+   const styling = {
+      marginTop : "70px"
+   }
+
+
+
+   return (
+      <div style={styling}>
+         <h1>hello</h1>
+      </div>
+   )
 }
+
+export default Landing

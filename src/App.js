@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Register from "./components/Register/Register"
-import { Landing } from "./components/Landing/Landing";
+import  Landing  from "./components/Landing/Landing";
 import { LandingDash } from "./components/Dashboad/LandinginDash/LandingDash"
 import { SubmitReq } from "./components/Dashboad/submitreq/SubmitReq"
 import Forrent from "./components/Dashboad/forrent/Forrent";
@@ -16,6 +16,7 @@ import PropReqScreen from './components/Dashboad/propReqScreen/PropReqScreen'
 import SignInSide from "./components/LoginPage/Login";
 import ButtonAppBar from "./components/Navbar/Navbar";
 import SignUp from "./components/Register/Register";
+import { Feedback } from "./components/Dashboad/Feedback/Feedback";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
              <Route exact path = "/dashboard/viewreq" component={ Viewrequest }></Route>
              <Route exact path = "/dashboard/myprofile" component={ MyProfile }></Route>
              <Route exact path = "/dashboard/commissioncal" component={ AgentTools }></Route>
+             <Route exact path = "/dashboard/feedback" component={ Feedback }></Route>
+
 
       </div>
   );

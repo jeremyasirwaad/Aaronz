@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useHistory } from 'react-router-dom';
 
 export default function ButtonAppBar() {
-
+  
     const history = useHistory();
 
   return (
@@ -17,8 +17,9 @@ export default function ButtonAppBar() {
       <AppBar position="fixed">
         <Toolbar>
 
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Aaronz 
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginTop: '10px' }}>
+          <img src="https://aaronz.co/static/media/logoWhite.3e2b20a0acc86074901868a49b85ca61.svg" alt="" />
+             
           </Typography>
           <Button color="inherit" onClick={() => { history.push('/login')  }}>Login</Button>
         </Toolbar>

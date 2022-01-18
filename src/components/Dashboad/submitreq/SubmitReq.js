@@ -13,7 +13,7 @@ export const SubmitReq = () => {
 
     return (
         <div className='submitreqpage'>  
-            <h2 className='title'>Property Request</h2>
+            <h2 className='title'>Looking for a Property ?</h2>
             <div className="choosecontainer">
                 <div className="forsale hover" onClick={ () => { history.push("/dashboard/forsale") } }>
                     <img className='imgs forsaleimg' src={ Forsale } alt="" />

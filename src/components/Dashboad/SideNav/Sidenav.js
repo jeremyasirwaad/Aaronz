@@ -11,6 +11,8 @@ export const Sidenav = () => {
 
     const [active, setActive] = useState(true);
     const [active2, setActive2] = useState(true);
+    const [active3, setActive3] = useState(true);
+
 
 
     const toggle = () => {
@@ -31,6 +33,15 @@ export const Sidenav = () => {
         }
     }
 
+    const toggle3 = () => {
+        if(active3){
+            setActive3(false);
+        }
+        else if(!active3){
+            setActive3(true);
+        }
+    }
+
     return (
         <div className='sidebar'>
             <div className='logodetails'>
@@ -48,8 +59,8 @@ export const Sidenav = () => {
                         <i class= { active ? 'bx bx-chevron-down downi' : 'bx bx-chevron-down downi rotate'} style={{"fontSize":"22px"}} onClick={() => { toggle(); } }></i>
                     </div>
                     <div className= { active ? "sublinks close noselect" : "sublinks noselect" }>
-                        <span className='kka' onClick={() => {history.push('/dashboard/submitreq')}}>Property Request</span>
-                        <span onClick={() => {history.push('/dashboard/submitreq')}}>Client Request</span>
+                        <span className='kka' onClick={() => {history.push('/dashboard/submitreq')}}>Looking for a Property</span>
+                        <span onClick={() => {history.push('/dashboard/submitreq')}}>Looking for a Client</span>
                         <span onClick={() => { history.push('/dashboard/viewreq')}}>My Requests</span>
                     </div>
                 </div>      
@@ -64,10 +75,18 @@ export const Sidenav = () => {
                         <span className='kka' onClick={() => { history.push('/dashboard/commissioncal') } }>Commission Calculator</span>
                     </div>
                 </div>            
-                <div className="Convo links">
-                    <i class='bx bx-message-dots' ></i>
-                     <span>Conversations</span>
-                </div>
+                <div className="Request noselect">
+                    <div className = "links">
+                        <i onClick={() => { toggle3(); }} class='bx bx-repost' ></i>
+                        <span onClick={() => { toggle3();  }}>FeedBack & FAQ</span>
+                        <i class= { active3 ? 'bx bx-chevron-down downi' : 'bx bx-chevron-down downi rotate'} style={{"fontSize":"22px"}} onClick={() => { toggle3(); } }></i>
+                    </div>
+                    <div className= { active3 ? "sublinks close noselect" : "sublinks noselect" }>
+                        <span className='kka' onClick={() => { history.push('/dashboard/feedback') } }>FeedBack</span>
+                        <span onClick={() => { history.push('/dashboard/viewreq')}}>FAQ</span>
+
+                    </div>
+                </div>  
             </div>
             <div className="accountdiv">
             <i class='bx bx-user-circle' onClick={() => { history.push('/dashboard/myprofile')}}></i>

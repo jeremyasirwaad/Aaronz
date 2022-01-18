@@ -56,35 +56,45 @@ const AgentTools = () => {
    console.log(totalComAm);
 
    return (
-      <div style={{ marginTop: "100px", marginLeft: "400px", marginRight: "50px" }}>
-         
-         <h2 style={{ "marginBottom": "40px" }}>Commission Calculator:</h2>
-      <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <div
+         style={{
+            marginTop: "100px",
+            marginLeft: "400px",
+            marginRight: "50px",
+            marginBottom: "40px  "
+         }}
+      >
+         <h2 style={{ marginBottom: "20px" }}>Commission Calculator:</h2>
+         <TableContainer component={Paper}>
+            <Table
+               sx={{
+                  border: 2,
+               }}
+               aria-label="simple table"
+            >
                <TableBody>
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                     <TableCell component="th" scope="row">
-                        <Typography> Enter in the Deal value</Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
+                  <TableRow
+                     sx={{
+                        "&:last-child td, &:last-child th": { border: 5 },
+                        borderBottom: 1.5,
+                     }}
+                  >
+                     <TableCell sx={{ width: "50%" }} component="th" scope="row">
+                        <Typography> Enter in the Deal value:</Typography>{" "}
                         <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
                            id="standard-basic"
+                           type="number"
                            label="Value"
                            value={dealValue}
                            onChange={(e) => setdealValue(e.target.value)}
-                           variant="standard"
+                           variant="outlined"
                         />
                      </TableCell>
-                  </TableRow>
-
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                     <TableCell component="th" scope="row">
-                        <Typography> Enter the Buyer/Tenant commission percentage</Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
+                     <TableCell component="th" sx={{ width: "50%" }} scope="row">
+                        <Typography> Enter the Buyer/Tenant commission percentage</Typography>{" "}
                         <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
                            id="standard-basic"
                            value={ComBuyer}
                            onKeyUp={handleComChange}
@@ -94,18 +104,18 @@ const AgentTools = () => {
                               setagentPer(0);
                            }}
                            label="Value"
-                           variant="standard"
+                           variant="outlined"
                         />
                      </TableCell>
                   </TableRow>
 
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                     <TableCell component="th" scope="row">
-                        <Typography> Commission from landlord %</Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
+                  <TableRow
+                     sx={{ "&:last-child td, &:last-child th": { border: 0 }, borderBottom: 1.5 }}
+                  >
+                     <TableCell sx={{ width: "50%" }} component="th" scope="row">
+                        <Typography> Commission from landlord %</Typography>{" "}
                         <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
                            id="standard-basic"
                            value={ComLand}
                            onKeyUp={handleComChange}
@@ -115,73 +125,89 @@ const AgentTools = () => {
                               setagentPer(0);
                            }}
                            label="Value"
-                           variant="standard"
+                           variant="outlined"
+                        />
+                     </TableCell>
+                     <TableCell sx={{ width: "50%" }} component="th" scope="row">
+                        <Typography> Total commission %</Typography>{" "}
+                        <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
+                           id="standard-basic"
+                           value={totalCom}
+                           variant="outlined"
                         />
                      </TableCell>
                   </TableRow>
 
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                     <TableCell component="th" scope="row">
-                        <Typography> Total commission %</Typography>
+                  <TableRow
+                     sx={{ "&:last-child td, &:last-child th": { border: 0 }, borderBottom: 1.5 }}
+                  >
+                     <TableCell sx={{ width: "50%" }} component="th" scope="row">
+                        <Typography> Total commission %</Typography>{" "}
+                        <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
+                           id="standard-basic"
+                           value={totalCom}
+                           variant="outlined"
+                        />
                      </TableCell>
-                     <TableCell>
-                        {" "}
-                        <TextField id="standard-basic" value={totalCom} variant="standard" />
+                     <TableCell sx={{ width: "50%" }} component="th" scope="row">
+                        <Typography> Total commission Amount</Typography>{" "}
+                        <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
+                           id="standard-basic"
+                           value={totalComAm}
+                           variant="outlined"
+                        />
                      </TableCell>
                   </TableRow>
 
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                     <TableCell component="th" scope="row">
-                        <Typography> Total commission Amount</Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
-                        <TextField id="standard-basic" value={totalComAm} variant="standard" />
-                     </TableCell>
-                  </TableRow>
-
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                  <TableRow
+                     sx={{ "&:last-child td, &:last-child th": { border: 0 }, borderBottom: 1.5 }}
+                  >
                      <TableCell component="th" scope="row">
                         <Typography>Commission to aaronz </Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
-                        <TextField id="standard-basic" value={ComToAaronz} variant="standard" />
-                     </TableCell>
-                  </TableRow>
 
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                        <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
+                           id="standard-basic"
+                           value={ComToAaronz}
+                           variant="outlined"
+                        />
+                     </TableCell>
                      <TableCell component="th" scope="row">
                         <Typography>Remaning commission </Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
-                        <TextField id="standard-basic" value={RemCom} variant="standard" />
+
+                        <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
+                           id="standard-basic"
+                           value={RemCom}
+                           variant="outlined"
+                        />
                      </TableCell>
                   </TableRow>
 
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                  <TableRow
+                     sx={{ "&:last-child td, &:last-child th": { border: 0 }, borderBottom: 1.5 }}
+                  >
                      <TableCell component="th" scope="row">
-                        <Typography>Enter in your commission percentage %</Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
+                        <Typography>Enter in your commission percentage %</Typography>{" "}
                         <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
                            id="standard-basic"
                            value={agentPer}
                            onChange={(e) => setagentPer(e.target.value)}
-                           variant="standard"
+                           variant="outlined"
                         />
                      </TableCell>
-                  </TableRow>
-
-                  <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                      <TableCell component="th" scope="row">
-                        <Typography>Your earning on this deal</Typography>
-                     </TableCell>
-                     <TableCell>
-                        {" "}
-                        <TextField id="standard-basic" value={`${agentAmount}  AED`} variant="standard" />
+                        <Typography variant="h5">Your earning on this deal</Typography>{" "}
+                        <TextField
+                           sx={{ marginTop: "20px", width: "80%" }}
+                           id="standard-basic"
+                           value={`${agentAmount}  AED`}
+                           variant="outlined"
+                        />
                      </TableCell>
                   </TableRow>
                </TableBody>

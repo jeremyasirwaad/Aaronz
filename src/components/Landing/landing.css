@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+.app {
+   font-family: "Rubik", sans-serif;
+}
+
+.header {
+   display: flex;
+   /* background-image: url("https://image.freepik.com/free-vector/silhouette-skyline-illustration_53876-78786.jpg"); */
+   background: #d66d75; /* fallback for old browsers */
+   background: -webkit-linear-gradient(
+      to bottom,
+      #e29587,
+      #d66d75
+   ); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(
+      to bottom,
+      #e29587,
+      #d66d75
+   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   justify-content: center;
+   align-items: center;
+   font-size: 50px;
+   font-family: "Rubik", sans-serif;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+}
+
+.span1 {
+   color: #18216d;
+}
+
+.words {
+   margin-top: -60px;
+   margin-left: 30px;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   font-size: 72px;
+   justify-content: center;
+
+   color: black;
+}
+
+.header h1 {
+   font-size: 90px;
+
+   padding: 20px;
+   font-weight: 600px;
+   margin-top: 30px;
+}
+
+.header p {
+   font-size: 40px;
+
+   width: 700px;
+   padding: 30px;
+}
+.header img {
+   
+   flex: 1;
+   width: 50vh;
+   height: 50vh;
+
+}
+
+.two {
+   display: flex;
+
+   background: #654ea3; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #eaafc8, #654ea3); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(
+      to right,
+      #eaafc8,
+      #654ea3
+   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   height: 110vh;
+
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+   align-items: center;
+
+   font-family: "Rubik", sans-serif;
+}
+
+.two h2 {
+   font-size: 60px;
+
+   padding: 10px;
+   color: #18216d;
+   font-weight: 500px;
+}
+
+.two p {
+   font-size: 40px;
+}
+.two img {
+   height: 300px;
+   width: 700px;
+}
+
+ul {
+   margin-left: 70px;
+   font-size: 30px;
+}
+
+.three {
+   background: #8360c3; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #2ebf91, #8360c3); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(
+      to right,
+      #2ebf91,
+      #8360c3
+   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   height: 100vh;
+
+   align-items: center;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+
+   flex-direction: column;
+   font-size: 40px;
+}
+.three p {
+   width: 70%;
+   font-weight: 400px;
+   font-size: 50px;
+}
+
+.three img {
+   height: 400px;
+   width: 400px;
+}
+
+.four {
+   background-color: #5de6de;
+   background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+   height: 100vh;
+   align-items: center;
+   display: flex;
+   padding: 30px;
+   font-size: 30px;
+}
+
+.four img {
+   height: 400px;
+   width: 400px;
+}
+
+.four div {
+   margin-left: 40px;
+}
+
+.four div h2 {
+   font-size: 60px;
+
+   padding: 10px;
+   color: #18216d;
+   font-weight: 500px;
+}
+.five {
+   background-color: #eec0c6;
+   background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
+   height: 100vh;
+   align-items: center;
+   display: flex;
+   padding: 30px;
+   font-size: 30px;
+}
+
+.five img {
+   height: 400px;
+   width: 500px;
+}
+
+.five h2 {
+   font-size: 60px;
+
+   padding: 10px;
+   color: #18216d;
+   font-weight: 500px;
+}
