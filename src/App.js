@@ -4,11 +4,11 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Register from "./components/Register/Register"
-<<<<<<< HEAD
+
 import  Landing  from "./components/Landing/Landing";
-=======
-import Landing from "./components/Landing/Landing"
->>>>>>> ba7fe1aba5849ebf8120fd677c04eb6764d9d512
+
+
+
 import { LandingDash } from "./components/Dashboad/LandinginDash/LandingDash"
 import { SubmitReq } from "./components/Dashboad/submitreq/SubmitReq"
 import Forrent from "./components/Dashboad/forrent/Forrent";

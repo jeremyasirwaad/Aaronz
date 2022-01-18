@@ -82,11 +82,7 @@ export const Sidenav = () => {
                         <i class= { active3 ? 'bx bx-chevron-down downi' : 'bx bx-chevron-down downi rotate'} style={{"fontSize":"22px"}} onClick={() => { toggle3(); } }></i>
                     </div>
                     <div className= { active3 ? "sublinks close noselect" : "sublinks noselect" }>
-<<<<<<< HEAD
                         <span className='kka' onClick={() => { history.push('/dashboard/feedback') } }>FeedBack</span>
-=======
-                        <span className='kka' onClick={() => { history.push('/dashboard/commissioncal') } }>FeedBack</span>
->>>>>>> ba7fe1aba5849ebf8120fd677c04eb6764d9d512
                         <span onClick={() => { history.push('/dashboard/viewreq')}}>FAQ</span>
 
                     </div>
