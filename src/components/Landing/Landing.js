@@ -37,66 +37,66 @@ const Landing = () => {
                </div>
             </div>
             <div className='contentdiv'>
-               <span className='landtit'>Welcome To <span className = 'landcol'>Aaronz Connect</span></span>
-               <span className='landtit'>The ultimate solution to </span>
-               <span className='landtit'>finding a property for your client </span>
-               <span className='slogan'>(Aaronz & Co Real Estate's Product)</span>
-               <i  class="fas fa-angle-double-down vert-move"></i>
+               <span data-aos="fade-up" className='landtit'>Welcome To <span className = 'landcol'>Aaronz Connect</span></span>
+               <span data-aos="fade-up" className='landtit'>The ultimate solution to </span>
+               <span data-aos="fade-up" className='landtit'>finding a property for your client </span>
+               <span data-aos="fade-up" className='slogan'>(Aaronz & Co Real Estate's Product)</span>
+               <i data-aos="fade-right" class="fas fa-angle-double-down vert-move"></i>
             </div>
             <div className="contentdiv2">
-              <span className='sec2tit'>HOW DOES THIS WORK?</span>
+              <span className='sec2tit' data-aos="zoom-in">HOW DOES THIS WORK?</span>
               <div className="sec2conwrap">
                      <div className="how1">
-                        <span className='summa'>Login to Aaronz connect using your aaronz email ID and submit your request whether you are looking for a buyer or a property.</span>
+                        <span  data-aos="fade-right" className='summa'>Login to Aaronz connect using your aaronz email ID and submit your request whether you are looking for a buyer or a property.</span>
                         <div></div>
-                        <img className='howimg' src={login} alt="" />
+                        <img data-aos="fade-left" className='howimg' src={login} alt="" />
                      </div>
                      <div className="how2">
-                     <img className='howimg' src={lock} alt="" />
-                        <span>Private conversations remain private  </span>
+                     <img  data-aos="fade-right"  className='howimg' src={lock} alt="" />
+                        <span data-aos="fade-left">Private conversations remain private  </span>
                      </div>
                      <div className="how3">
-                        <span>Schedule viewings and track the deal progress </span>
-                        <img className='howimg' src={progress} alt="" />
+                        <span data-aos="fade-right" >Schedule viewings and track the deal progress </span>
+                        <img data-aos="fade-left" className='howimg' src={progress} alt="" />
                      </div>
                      <div className="how4">
-                     <img className='howimg' src={hand} alt="" />
-                        <span>Close deals and calculate commission share for easy tracking for future</span>
+                     <img  data-aos="fade-right"  className='howimg' src={hand} alt="" />
+                        <span data-aos="fade-left">Close deals and calculate commission share for easy tracking for future</span>
                      </div>
               </div>
             </div>
-            <img className='svg1' src={svg1} alt="" />
-            <img className='svg2' src={svg2} alt="" />
+            <img data-aos="fade-up-right" className='svg1' src={svg1} alt="" />
+            <img data-aos="fade-up-left" className='svg2' src={svg2} alt="" />
          </div>
          <div className="spacer layer2">
-         <span className='sec2tit titsec3'>Have a <span className='sec3col'>Buyer</span> but no <span className='sec3col'>Property?</span></span>
+         <span className='sec2tit titsec3' data-aos="zoom-in">Have a <span className='sec3col'>Buyer</span> but no <span className='sec3col'>Property?</span></span>
               <div className="sec2conwrap">
                      <div className="how1 ">
-                        <span className='summa' style={{"color":"white"}}>Simply put in the request and this is shared with Aaronz network of agents and expect a response within minutes. </span>
+                        <span data-aos="fade-right" className='summa' style={{"color":"white"}}>Simply put in the request and this is shared with Aaronz network of agents and expect a response within minutes. </span>
                         <div></div>
-                        <img className='howimg' src={house} alt="" />
+                        <img data-aos="fade-left" className='howimg' src={house} alt="" />
                      </div>
                      <div className="how2">
-                     <img className='howimg' src={match} alt="" />
-                        <span className='summa'style={{"color":"white"}}>The system is designed to scan through the inventory and provide you with an exact match or matches that are similar to your request </span>
+                     <img data-aos="fade-right" className='howimg' src={match} alt="" />
+                        <span  data-aos="fade-left" className='summa'style={{"color":"white"}}>The system is designed to scan through the inventory and provide you with an exact match or matches that are similar to your request </span>
                      </div>
               </div>
          </div>
          <div className="spacer layer3">
          <div className="sec4conwrap">
                      <div className="how5 ">
-                     <img className='howimg' src={connect} alt="" />
-                        <span style={{"marginTop": "40px", "textAlign":"center"}}>Click on the property you want to show your buyer. Connect with the agent who has the property on the go and track the conversation </span>
+                     <img data-aos="fade-up" className='howimg' src={connect} alt="" />
+                        <span data-aos="fade-up" style={{"marginTop": "40px", "textAlign":"center"}}>Click on the property you want to show your buyer. Connect with the agent who has the property on the go and track the conversation </span>
                         <div></div>
                      </div>
               </div>
          </div>
          <div className="spacer layer4">
-         <span style={{"color":"black", "marginBottom":"50px"}} className='sec2tit '>Have a Hot <span className='sec5col'>Property</span> but no <span className='sec5col'>Buyer?</span></span>
+         <span data-aos="fade-up" style={{"color":"black", "marginBottom":"50px"}} className='sec2tit '>Have a Hot <span className='sec5col'>Property</span> but no <span className='sec5col'>Buyer?</span></span>
          <div className="sec4conwrap">
                      <div className="how5 ">
-                     <img style={{"marginBottom":"50px"}} className='howimg' src={buyer} alt="" />
-                        <span  style={{"marginTop": "40px", "textAlign":"center"}}>We have a solution for you as well. Put in details of your property and one of our agents with get back to you with a buyer. </span>
+                     <img data-aos="fade-up" style={{"marginBottom":"50px"}} className='howimg' src={buyer} alt="" />
+                        <span data-aos="fade-up"  style={{"marginTop": "40px", "textAlign":"center"}}>We have a solution for you as well. Put in details of your property and one of our agents with get back to you with a buyer. </span>
                         <div></div>
                      </div>
               </div>
