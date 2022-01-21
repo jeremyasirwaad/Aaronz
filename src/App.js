@@ -25,7 +25,7 @@ import { Feedback } from "./components/Dashboad/Feedback/Feedback";
 function App() {
   return (
       <div className="App">
-          <ButtonAppBar />
+            <Route path="/dashboard" component = {ButtonAppBar}></Route>
             <Route path="/dashboard" component={Sidenav}></Route>
              <Route exact path = "/" component={ Landing }></Route>
              <Route exact path = "/login" component={ SignInSide }></Route>
