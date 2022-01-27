@@ -85,7 +85,7 @@
 }
 
 .jobrequirements input {
-   border: 1px solid black;
+   border: 2px solid #6600FF;
    width: 350px;
    height: 40px;
    margin: 15px;
@@ -96,7 +96,7 @@
 }
 
 .jobrequirements select {
-   border: 1px solid black;
+   border: 2px solid #6600FF;
    width: 350px;
    height: 40px;
    margin: 15px;

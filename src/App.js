@@ -21,6 +21,7 @@ import SignInSide from "./components/LoginPage/Login";
 import ButtonAppBar from "./components/Navbar/Navbar";
 import SignUp from "./components/Register/Register";
 import { Feedback } from "./components/Dashboad/Feedback/Feedback";
+import HomeScreen from './components/Dashboad/homeScreen/HomeScreen'
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
             <Route path="/dashboard" component={Sidenav}></Route>
              <Route exact path = "/" component={ Landing }></Route>
              <Route exact path = "/login" component={ SignInSide }></Route>
-             <Route exact path = "/dashboard" component={LandingDash}></Route>
+             <Route exact path = "/dashboard" component={HomeScreen}></Route>
              <Route exact path = "/dashboard/Submitreq" component={ SubmitReq }></Route>
              <Route exact path = "/signup" component={ SignUp }></Route>
              <Route exact path = "/dashboard/forsale" component={ PropReqScreen }></Route>

@@ -12,6 +12,7 @@ import house from './undraw_buy_house_-560-d.svg'
 import match from './undraw_pie_graph_re_fvol.svg'
 import connect from './undraw_connection_re_lcud.svg'
 import buyer from './undraw_business_deal_re_up4u.svg'
+import connection from './undraw_online_connection_6778.svg'
 import { useHistory } from 'react-router-dom'
 const Landing = () => {
 
@@ -27,7 +28,7 @@ const Landing = () => {
 
    return (
       <div className='landingpage' >
-         <div className='spacer layer1'>
+         <div className='spacer1 layer1'>
             <div className="navdiv">
                <div className="logodiv">
                    <img src="https://aaronz.co/static/media/logoWhite.3e2b20a0acc86074901868a49b85ca61.svg" alt="" />
@@ -38,7 +39,7 @@ const Landing = () => {
                </div>
             </div>
             <div className='contentdiv'>
-               <span data-aos="fade-up" className='landtit'>Welcome To <span className = 'landcol'>Aaronz Connect</span></span>
+               <span data-aos="fade-up" className='landtit tit1'>Welcome To <span className = 'landcol'>Aaronz Connect</span></span>
                <span data-aos="fade-up" className='landtit'>The ultimate solution to </span>
                <span data-aos="fade-up" className='landtit'>finding a property for your client </span>
                <span data-aos="fade-up" className='slogan'>(Aaronz & Co Real Estate's Product)</span>
@@ -86,7 +87,7 @@ const Landing = () => {
          <div className="spacer layer3">
          <div className="sec4conwrap">
                      <div className="how5 ">
-                     <img data-aos="fade-up" className='howimg' src={connect} alt="" />
+                     <img data-aos="fade-up" className='howimg' src={connection} alt="" />
                         <span data-aos="fade-up" style={{"marginTop": "40px", "textAlign":"center"}}>Click on the property you want to show your buyer. Connect with the agent who has the property on the go and track the conversation </span>
                         <div></div>
                      </div>

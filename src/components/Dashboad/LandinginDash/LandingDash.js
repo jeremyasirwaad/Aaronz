@@ -1,10 +1,43 @@
-import React,{ useState } from 'react'
-import './landingdash.css'
-
 import Landingcard from './landingcards/Landingcard'
-
+import axios from 'axios'
+import React,{ useState, useEffect } from 'react'
+import './landingdash.css'
+import convert from 'xml-js';
+import parseString from 'xml2js'
+import XMLParser from 'react-xml-parser';
 export const LandingDash = () => {
 
+    const [listing, setListing] = useState([]);
+    const [data, setData] = useState("");
+    const parser = new DOMParser();
+    useEffect(()=>{
+        const getXMLResponse = async () => {
+            await axios
+            .get("http://localhost:8010/proxy/feed/xml.php?cl=3410&pid=9922&acc=1154", {
+                "Content-Type": "application/xml; charset=utf-8"
+             })
+             .then(function(response) {
+                // setData( response.data );
+                // console.log(response.data);
+                // parseString(response.data, function (err, result) {
+                setData(convert.xml2js(response.data, {compact: true, spaces: 4}))
+                // console.log(convert.xml2js(parser.parseFromString(response.data, "application/xml")))
+
+                // console.log(parser.parseFromString(response.data, "application/xml"))   
+                // setData(parser.parseFromString(response.data, "application/xml"))
+                // });
+            })
+            .catch(function(error) {
+                console.log(error);
+                
+            });
+        }
+        // console.log(data.elements[0].elements[352])
+        // setData(data.Listings.Listing);
+        getXMLResponse();
+        // setListing(data.Listings.Listing)
+        // console.log(data.length())
+    },[])
     const [today, setToday] = useState(true);
     const [yesterday, setYesterday] = useState(true);
     const [last3days, setLast3days] = useState(true);
@@ -21,6 +54,13 @@ export const LandingDash = () => {
         setInfostate(false);
     }
 
+    console.log(data)
+    
+    
+    // const list = data.getElementsByTagName('Listing')
+    // console.log(list);
+    // console.log(listing)
+
     return (
         <div className='landingdash'>
             <span className='hometitle'>HomePage</span>
@@ -34,9 +74,6 @@ export const LandingDash = () => {
                         <span>Today</span>
                         <i class='bx bxs-down-arrow' style={{ "marginLeft": "10px"}}></i>
                     </div>
-                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
-                    <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
-
                 </div>
                 <div className="Yesterday">
                 <div className="homesubtitle">
@@ -46,7 +83,6 @@ export const LandingDash = () => {
                     <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes" />
                     <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes"/>
                     <Landingcard getBack = { managemoreinfo } Date = "8/12" budget = "25000" Name = "Burj Kalifa" Bedrooms = "5" Maid = "Yes" />
-                    
 
                 </div>
                 <div className="Lastthreedays">

@@ -18,7 +18,7 @@ function Copyright(props) {
    return (
       <Typography variant="body2" color="text.secondary" align="center" {...props}>
          {"Copyright © "}
-         <Link color="inherit" href="https://aaronz.co/">
+         <Link color="inherit" href="https://aaronz.co/" sx={{textDecoration:"none",hover:{color:"white"}}}>
             Aaronz
          </Link>{" "}
          {new Date().getFullYear()}
@@ -48,7 +48,7 @@ export default function SignUp() {
             <Grid
                item
                xs={12}
-               sm={8}
+               sm={7}
                md={6}
                elevation={6}
                square
@@ -82,6 +82,7 @@ export default function SignUp() {
                                  id="firstName"
                                  label="First Name"
                                  autoFocus
+                                 variant="filled"
                               />
                            </Grid>
                            <Grid item xs={12} sm={6}>
@@ -93,6 +94,7 @@ export default function SignUp() {
                                  label="Last Name"
                                  name="lastName"
                                  autoComplete="family-name"
+                                 variant="filled"
                               />
                            </Grid>
                            <Grid item xs={12}>
@@ -104,6 +106,7 @@ export default function SignUp() {
                                  label="Email Address"
                                  name="email"
                                  autoComplete="email"
+                                 variant="filled"
                               />
                            </Grid>
                            <Grid item xs={12}>
@@ -116,6 +119,7 @@ export default function SignUp() {
                                  type="password"
                                  id="password"
                                  autoComplete="new-password"
+                                 variant="filled"
                               />
                            </Grid>
                            <Grid item xs={12}>
@@ -162,7 +166,7 @@ export default function SignUp() {
             <Grid
                item
                xs={false}
-               sm={4}
+               sm={5}
                md={6}
                sx={{
                   backgroundImage:

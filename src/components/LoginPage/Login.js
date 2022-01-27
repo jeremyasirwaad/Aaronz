@@ -55,25 +55,25 @@ export default function SignInSide() {
                <Grid
                   item
                   xs={false}
-                  sm={4}
-                  md={7}
+                  sm={6}
+                  md={6}
                   sx={{
                      backgroundImage:
                         "url(https://image.freepik.com/free-vector/user-verification-unauthorized-access-prevention-private-account-authentication-cyber-security-people-entering-login-password-safety-measures_335657-3530.jpg)",
                      backgroundRepeat: "no-repeat",
                      backgroundColor: (t) =>
                         t.palette.mode === "light" ? t.palette.grey[50] : t.palette.grey[900],
-                    
+
                      backgroundPosition: "center",
                   }}
                />
                <Grid
                   item
                   xs={12}
-                  sm={8}
-                  md={5}
+                  sm={6}
+                  md={6}
                   component={Paper}
-                  elevation={6}
+                  elevation={12}
                   square
                   sx={{ backgroundColor: "#700dff" }}
                >
@@ -108,6 +108,7 @@ export default function SignInSide() {
                         <TextField
                            sx={{ bgcolor: "white", borderRadius: "10px" }}
                            margin="normal"
+                           variant="filled"
                            required
                            fullWidth
                            name="password"

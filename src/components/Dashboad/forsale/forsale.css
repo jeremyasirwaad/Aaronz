@@ -25,8 +25,8 @@
 	position: relative;
 	bottom: 50px;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-	background-color: #85FFBD;
-background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+	/* background-color: #85FFBD; */
+/* background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
 
 	border-radius: 10px;
 	height: 800px;
@@ -58,7 +58,7 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
 .companydetails input {
-	border: 1px solid black;
+	border: 5px solid #6600FF;
 	width: 350px;
 	height: 40px;
 	margin: 15px;
@@ -90,7 +90,7 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
 .jobrequirements input {
-	border: 1px solid black;
+	border: 1px solid #6600FF;
 	width: 350px;
 	height: 40px;
 	margin: 15px;
