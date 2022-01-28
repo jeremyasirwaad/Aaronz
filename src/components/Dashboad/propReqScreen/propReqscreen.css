@@ -84,6 +84,10 @@
    justify-content: space-evenly;
 }
 
+.submit1234{
+   color: white;
+}
+
 .jobrequirements input {
    border: 2px solid #6600FF;
    width: 350px;
@@ -100,7 +104,7 @@
    width: 350px;
    height: 40px;
    margin: 15px;
-   padding: 10px;
+   padding: 4px;
    border-radius: 5px;
 }
 

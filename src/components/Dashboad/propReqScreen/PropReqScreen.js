@@ -144,7 +144,7 @@ const PropReqScreen = () => {
                         </div>
                      </div>
                      <button className="postbtnforsale">
-                        <a href="#results">Submit</a>
+                        <a href="#results" className="submit1234">Submit</a>
                      </button>
                   </div>
                </div>

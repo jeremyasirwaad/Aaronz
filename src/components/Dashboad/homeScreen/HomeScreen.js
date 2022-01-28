@@ -251,13 +251,13 @@ const datas = [
 
 const HomeScreen = () => {
    return (
-      <div style={{ marginLeft: "300px", marginTop: "100px", padding: "20px" }}>
+      <div style={{ marginLeft: "300px", marginTop: "80px", padding: "20px" }}>
          <Typography variant="h4" color="initial" mb={1}>
             DashBoard
          </Typography>
          <Grid container columnSpacing={0} spacing={3} justifyContent="center" alignItems="center">
             {datas.map((data, index) => (
-               <Grid key={index}  item xs={12} md={6} lg={4} >
+               <Grid key={index} item xs={12} md={6} lg={4} xl={3}>
                   <NewCard {...data} />
                </Grid>
             ))}

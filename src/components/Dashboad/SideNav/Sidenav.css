@@ -54,7 +54,10 @@
 .sidenavlinks{
     display: flex;
     flex-direction: column;
-    
+    /* overflow-y: auto; */
+    /* background-color: aqua; */
+    height: auto;
+    margin-bottom: 200px;    
 }
 
 .downi{

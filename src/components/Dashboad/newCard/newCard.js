@@ -196,14 +196,13 @@ const NewCard = ({
                      <MenuItem value={10}>Deal done within Aaronz</MenuItem>
                      <MenuItem value={21}>No one has responded</MenuItem>
                      <MenuItem value={22}>Deal done outside Aaronz</MenuItem>
-                     <MenuItem value={22}>Property not with me anymore</MenuItem>
-                     <MenuItem value={22}>Others</MenuItem>
+                     <MenuItem value={24}>Property not with me anymore</MenuItem>
+                     <MenuItem value={26}>Others</MenuItem>
                   </Select>
-
-                  <Button onClick={handleClose} variant="primary" style={{ marginTop: "10px" }}>
-                     Done
-                  </Button>
                </FormControl>
+               <Button onClick={handleClose} variant="primary" style={{ marginTop: "10px" }}>
+                  Done
+               </Button>
             </Box>
          </Modal>
 
@@ -212,7 +211,7 @@ const NewCard = ({
                maxWidth: 280,
                height: 390,
                padding: "5px",
-               
+
                borderRadius: "10px",
                borderColor: "#f80066",
                borderStyle: "solid",
@@ -306,13 +305,13 @@ const NewCard = ({
                   <ShareIcon sx={{ color: "#1c6dd0" }} />
                </IconButton>
                <div style={{ display: "flex", marginLeft: "6px", height: "40px" }}>
-                  <Button sx={{ }} onClick={handleAgentModalOpen}>
+                  <Button sx={{}} onClick={handleAgentModalOpen}>
                      Agent
                   </Button>
                   <Button
                      variant="outline-danger"
                      onClick={handleOpen}
-                     style={{ marginLeft: "10px",  }}
+                     style={{ marginLeft: "10px" }}
                   >
                      Decline
                   </Button>
