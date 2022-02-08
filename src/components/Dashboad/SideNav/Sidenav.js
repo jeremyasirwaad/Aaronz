@@ -83,7 +83,7 @@ export const Sidenav = () => {
                     </div>
                     <div className= { active3 ? "sublinks close noselect" : "sublinks noselect" }>
                         <span className='kka' onClick={() => { history.push('/dashboard/feedback') } }>FeedBack</span>
-                        <span onClick={() => { history.push('/dashboard/viewreq')}}>FAQ</span>
+                        <span onClick={() => { history.push('/dashboard/faq')}}>FAQ</span>
 
                     </div>
                 </div>  

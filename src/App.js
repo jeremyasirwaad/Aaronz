@@ -22,6 +22,8 @@ import ButtonAppBar from "./components/Navbar/Navbar";
 import SignUp from "./components/Register/Register";
 import { Feedback } from "./components/Dashboad/Feedback/Feedback";
 import HomeScreen from './components/Dashboad/homeScreen/HomeScreen'
+import { FaqPage } from "./components/Dashboad/FAQ/Faq";
+
 
 function App() {
   return (
@@ -39,8 +41,7 @@ function App() {
              <Route exact path = "/dashboard/myprofile" component={ MyProfile }></Route>
              <Route exact path = "/dashboard/commissioncal" component={ AgentTools }></Route>
              <Route exact path = "/dashboard/feedback" component={ Feedback }></Route>
-
-
+             <Route exact path = "/dashboard/faq" component={ FaqPage }></Route>
       </div>
   );
 }
