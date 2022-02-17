@@ -28,9 +28,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Modal from "@mui/material/Modal";
 import { Avatar, List, ListItem, Paper, Stack } from "@mui/material";
-import { createTheme } from "@mui/material";
 
-import { ThemeProvider } from "@mui/material";
 
 const ImageModalStyle = {
    position: "absolute",

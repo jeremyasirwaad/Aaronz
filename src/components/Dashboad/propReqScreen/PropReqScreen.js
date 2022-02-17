@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import HomeScreen from "../homeScreen/HomeScreen";
 import "./propReqscreen.css";
-import Landingcard from "./LandinginDash/landingcards/Landingcard";
-
-import AgentInfoModal from "./agentInfoModal";
-
 
 const PropReqScreen = () => {
-
    return (
       <div>
          <div className="Postrequestsell">
             <div className="containerforsell">
-               <div className="mypostbgcontainer" style={{ "marginTop" : "120px" }}>
+               <div className="mypostbgcontainer" style={{ marginTop: "120px" }}>
                   <div className="mypostcontainer">
                      <h1>Property Request</h1>
                      <div className="jobrequirements">
@@ -143,48 +139,12 @@ const PropReqScreen = () => {
                            </div>
                         </div>
                      </div>
-                     <button className="postbtnforsale">
-                        <a href="#results" className="submit1234">Submit</a>
-                     </button>
+                     <button className="postbtnforsale">Submit</button>
                   </div>
                </div>
             </div>
          </div>
-        
-         <div className="results" id="results">
-            <Landingcard
-               Date="8/12"
-               budget="25000"
-               Name="Burj Kalifa"
-               Bedrooms="5"
-               Maid="Yes"
-               className="landingCard"
-            />
-            <Landingcard
-               Date="8/12"
-               budget="25000"
-               Name="Burj Kalifa"
-               Bedrooms="5"
-               Maid="Yes"
-               className="landingCard"
-            />
-            <Landingcard
-               Date="8/12"
-               budget="25000"
-               Name="Burj Kalifa"
-               Bedrooms="5"
-               Maid="Yes"
-               className="landingCard"
-            />
-            <Landingcard
-               Date="8/12"
-               budget="25000"
-               Name="Burj Kalifa"
-               Bedrooms="5"
-               Maid="Yes"
-               className="landingCard"
-            />
-         </div>
+         <HomeScreen value = "true" />
       </div>
    );
 };
