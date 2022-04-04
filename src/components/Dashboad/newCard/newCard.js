@@ -29,295 +29,336 @@ import Select from "@mui/material/Select";
 import Modal from "@mui/material/Modal";
 import { Avatar, List, ListItem, Paper, Stack } from "@mui/material";
 
-
 const ImageModalStyle = {
-   position: "absolute",
-   top: "50%",
-   left: "50%",
-   transform: "translate(-50%, -50%)",
-   bgcolor: "background.paper",
-   border: "2px solid #000",
-   boxShadow: 24,
-   height: "600px",
-   width: "670px",
+	position: "absolute",
+	top: "50%",
+	left: "50%",
+	transform: "translate(-50%, -50%)",
+	bgcolor: "background.paper",
+	border: "2px solid #000",
+	boxShadow: 24,
+	height: "600px",
+	width: "670px",
 };
 
 const ImageModal = {
-   "@media(max-Width:600px)": {
-      display: "none",
-   },
+	"@media(max-Width:600px)": {
+		display: "none",
+	},
 };
 
 const AgentModalStyle = {
-   position: "absolute",
-   top: "50%",
-   left: "50%",
-   transform: "translate(-50%, -50%)",
-   width: 400,
-   bgcolor: "background.paper",
-   border: "3px solid #600DFF",
-   borderRadius: "8px",
-   boxShadow: 54,
-   p: 4,
+	position: "absolute",
+	top: "50%",
+	left: "50%",
+	transform: "translate(-50%, -50%)",
+	width: 400,
+	bgcolor: "background.paper",
+	border: "3px solid #600DFF",
+	borderRadius: "8px",
+	boxShadow: 54,
+	p: 4,
 };
 
 const style = {
-   display: "flex",
-   flexDirection: "column",
-   position: "absolute",
-   justifyContent: "center",
-   alignItems: "center",
-   top: "50%",
-   left: "50%",
-   transform: "translate(-50%, -50%)",
-   width: 400,
+	display: "flex",
+	flexDirection: "column",
+	position: "absolute",
+	justifyContent: "center",
+	alignItems: "center",
+	top: "50%",
+	left: "50%",
+	transform: "translate(-50%, -50%)",
+	width: 400,
 
-   bgcolor: "background.paper",
+	bgcolor: "background.paper",
 
-   border: "3px solid #600DFF",
-   borderRadius: "8px",
-   boxShadow: 54,
-   p: 4,
+	border: "3px solid #600DFF",
+	borderRadius: "8px",
+	boxShadow: 54,
+	p: 4,
 };
 
 const NewCard = ({
-   propName,
-   address,
-   price,
-   description,
-   noOfBeds,
-   area,
-   floor,
-   noOfBathrooms,
-   agentName,
-   age,
-   expirence,
-   agentEmail,
-   agentImage,
-   SlideImages,
+	// propName,
+	// address,
+	// price,
+	// description,
+	// noOfBeds,
+	// area,
+	// floor,
+	// noOfBathrooms,
+	// agentName,
+	// age,
+	// expirence,
+	// agentEmail,
+	// agentImage,
+	// SlideImages,
+	Property_Name,
+	Web_Remarks,
+	Price,
+   Property_Title,
+	Bedrooms,
+   No_of_Bathroom,
+	Unit_Builtup_Area,
+	Listing_Agent,
+	Listing_Agent_Phone,
+	Listing_Agent_Photo,
+	Listing_Agent_Email,
+	Images,
 }) => {
-   const [openImageModal, setopenImageModal] = React.useState(false);
-   const handleImageModalOpen = () => setopenImageModal(true);
-   const handleImageModalClose = () => setopenImageModal(false);
+	const [openImageModal, setopenImageModal] = React.useState(false);
+	const handleImageModalOpen = () => setopenImageModal(true);
+	const handleImageModalClose = () => setopenImageModal(false);
 
-   const [agentModalOpen, setagentModalOpen] = React.useState(false);
-   const handleAgentModalOpen = () => setagentModalOpen(true);
-   const handleAgentModalClose = () => setagentModalOpen(false);
+	const [agentModalOpen, setagentModalOpen] = React.useState(false);
+	const handleAgentModalOpen = () => setagentModalOpen(true);
+	const handleAgentModalClose = () => setagentModalOpen(false);
 
-   const [open, setOpen] = React.useState(false);
-   const handleOpen = () => setOpen(true);
-   const handleClose = () => setOpen(false);
+	const [open, setOpen] = React.useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
 
-   return (
-      <div className="wrapper">
-         <Modal
-            sx={ImageModal}
-            open={openImageModal}
-            onClose={handleImageModalClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-         >
-            <Paper sx={ImageModalStyle}>
-               <Carousel onClick={handleImageModalOpen}>
-                  {SlideImages.map((image, index) => (
-                     <Carousel.Item key={index}>
-                        <CardMedia
-                           height="600"
-                           width="700"
-                           onClick={handleImageModalOpen}
-                           component="img"
-                           image={image.image}
-                        />
-                     </Carousel.Item>
-                  ))}
-               </Carousel>
-            </Paper>
-         </Modal>
+	return (
+		<div className="wrapper">
+         {/* <h1>{Property_name}</h1> */}
+			<Modal
+				sx={ImageModal}
+				open={openImageModal}
+				onClose={handleImageModalClose}
+				aria-labelledby="modal-modal-title"
+				aria-describedby="modal-modal-description"
+			>
+				<Paper sx={ImageModalStyle}>
+					<Carousel onClick={handleImageModalOpen}>
+						{Images.image.map((image, index) => (
+							<Carousel.Item key={index}>
+								<CardMedia
+									height="600"
+									width="700"
+									onClick={handleImageModalOpen}
+									component="img"
+									image={image}
+								/>
+							</Carousel.Item>
+						))}
+					</Carousel>
+				</Paper>
+			</Modal>
 
-         <Modal
-            open={agentModalOpen}
-            onClose={handleAgentModalClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-         >
-            <Box sx={AgentModalStyle}>
-               <div
-                  className=""
-                  style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-               >
-                  <Avatar sx={{ width: 110, height: 110 }} alt="Remy Sharp" src={agentImage} />
-                  <Typography id="modal-modal-title" variant="h4" ml={4}>
-                     {agentName}
-                  </Typography>
-               </div>
+			<Modal
+				open={agentModalOpen}
+				onClose={handleAgentModalClose}
+				aria-labelledby="modal-modal-title"
+				aria-describedby="modal-modal-description"
+			>
+				<Box sx={AgentModalStyle}>
+					<div
+						className=""
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+					>
+						<Avatar
+							sx={{ width: 110, height: 110 }}
+							alt="Remy Sharp"
+							src={Listing_Agent_Photo}
+						/>
+						<Typography id="modal-modal-title" variant="h4" ml={4}>
+							{Listing_Agent}
+						</Typography>
+					</div>
 
-               <List sx={{ fontSize: "20px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between" }}>
-                     <ListItem>Age : {age} </ListItem>
-                     <Button variant="light" style={{ backgroundColor: "#25d366" }}>
-                        <IconButton sx={{ fontSize: "15px", color: "black" }}>
-                           <WhatsAppIcon />
-                           Whastapp
-                        </IconButton>
-                     </Button>
-                  </div>
+					<List sx={{ fontSize: "20px" }}>
+						<div style={{ display: "flex", justifyContent: "space-between" }}>
+							<ListItem>Age : {25} </ListItem>
+							<Button variant="light" style={{ backgroundColor: "#25d366" }}>
+								<IconButton sx={{ fontSize: "15px", color: "black" }}>
+									<WhatsAppIcon />
+									Whastapp
+								</IconButton>
+							</Button>
+						</div>
 
-                  <ListItem>Expirence : {expirence} yrs</ListItem>
-                  <ListItem>Email: {agentEmail}</ListItem>
-               </List>
-            </Box>
-         </Modal>
+						<ListItem>Expirence : {10} yrs</ListItem>
+						<ListItem>Email: {Listing_Agent_Email}</ListItem>
+					</List>
+				</Box>
+			</Modal>
 
-         <Modal
-            className="modal-for-decline"
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-         >
-            <Box sx={style}>
-               <Typography id="modal-modal-title" variant="h6" component="h2">
-                  Please select a Reason for decline
-               </Typography>
-               <FormControl sx={{ m: 1, minWidth: 150 }}>
-                  <InputLabel id="demo-simple-select-autowidth-label" style={{ marginTop: "10px" }}>
-                     Choose
-                  </InputLabel>
-                  <Select
-                     labelId="demo-simple-select-autowidth-label"
-                     id="demo-simple-select-autowidth"
-                     // value={select}
-                     // onChange={handleChangefordel}
-                     autoWidth
-                     label="Age"
-                  >
-                     <MenuItem value={10}>Deal done within Aaronz</MenuItem>
-                     <MenuItem value={21}>No one has responded</MenuItem>
-                     <MenuItem value={22}>Deal done outside Aaronz</MenuItem>
-                     <MenuItem value={24}>Property not with me anymore</MenuItem>
-                     <MenuItem value={26}>Others</MenuItem>
-                  </Select>
-               </FormControl>
-               <Button onClick={handleClose} variant="primary" style={{ marginTop: "10px" }}>
-                  Done
-               </Button>
-            </Box>
-         </Modal>
+			<Modal
+				className="modal-for-decline"
+				open={open}
+				onClose={handleClose}
+				aria-labelledby="modal-modal-title"
+				aria-describedby="modal-modal-description"
+			>
+				<Box sx={style}>
+					<Typography id="modal-modal-title" variant="h6" component="h2">
+						Please select a Reason for decline
+					</Typography>
+					<FormControl sx={{ m: 1, minWidth: 150 }}>
+						<InputLabel
+							id="demo-simple-select-autowidth-label"
+							style={{ marginTop: "10px" }}
+						>
+							Choose
+						</InputLabel>
+						<Select
+							labelId="demo-simple-select-autowidth-label"
+							id="demo-simple-select-autowidth"
+							// value={select}
+							// onChange={handleChangefordel}
+							autoWidth
+							label="Age"
+						>
+							<MenuItem value={10}>Deal done within Aaronz</MenuItem>
+							<MenuItem value={21}>No one has responded</MenuItem>
+							<MenuItem value={22}>Deal done outside Aaronz</MenuItem>
+							<MenuItem value={24}>Property not with me anymore</MenuItem>
+							<MenuItem value={26}>Others</MenuItem>
+						</Select>
+					</FormControl>
+					<Button
+						onClick={handleClose}
+						variant="primary"
+						style={{ marginTop: "10px" }}
+					>
+						Done
+					</Button>
+				</Box>
+			</Modal>
 
-         <Card
-            sx={{
-               maxWidth: 280,
-               height: 390,
-               padding: "5px",
+			<Card
+				sx={{
+					maxWidth: 300,
+					height: "100%",
+					padding: "5px",
 
-               borderRadius: "10px",
-               borderColor: "#f80066",
-               borderStyle: "solid",
-            }}
-            elevation={10}
-         >
-            <CardHeader
-               sx={{ marginTop: "-20px" }}
-               title={propName}
-               subheader={
-                  <IconButton
-                     aria-label="location"
-                     sx={{
-                        fontSize: "10px",
-                        marginLeft: "-20px",
-                        marginBottom: "-10px",
-                        marginTop: "-15px",
-                     }}
-                  >
-                     <LocationOn sx={{ color: "#F80066" }} />
-                     {address}
-                  </IconButton>
-               }
-            />
-            <Carousel style={{ marginTop: "-17px" }} interval={3000}>
-               {SlideImages.map((image, index) => (
-                  <Carousel.Item key={index}>
-                     <CardMedia
-                        onClick={handleImageModalOpen}
-                        component="img"
-                        height="150"
-                        image={image.image}
-                     />
-                  </Carousel.Item>
-               ))}
-            </Carousel>
+					borderRadius: "10px",
+					borderColor: "#f80066",
+					borderStyle: "solid",
+				}}
+				elevation={10}
+			>
+				<CardHeader
+					sx={{ marginTop: "-20px" }}
+					title={Property_Name}
+					subheader={
+						<IconButton
+							aria-label="location"
+							sx={{
+								fontSize: "10px",
+								marginLeft: "-20px",
+								marginBottom: "-10px",
+								marginTop: "-15px",
+							}}
+						>
+							<LocationOn sx={{ color: "#F80066" }} />
+							{}
+						</IconButton>
+					}
+				/>
+				<Carousel style={{ marginTop: "-17px" }} interval={3000}>
+					{Images.image.map((image, index) => (
+						<Carousel.Item key={index}>
+							<CardMedia
+								onClick={handleImageModalOpen}
+								component="img"
+								height="150"
+								image={image}
+							/>
+						</Carousel.Item>
+					))}
+				</Carousel>
 
-            <CardContent>
-               <div style={{ display: "flex", marginBottom: "5px", marginTop: "-11px" }}>
-                  <Typography variant="h8">AED</Typography>
-                  <Typography variant="h5" ml={1}>
-                     {" "}
-                     {price}
-                  </Typography>
-                  <Typography variant="h8" ml={1}>
-                     onwards
-                  </Typography>
-               </div>
+				<CardContent>
+					<div
+						style={{ display: "flex", marginBottom: "5px", marginTop: "-11px" }}
+					>
+						<Typography variant="h8">AED</Typography>
+						<Typography variant="h5" ml={1}>
+							{" "}
+							{Price}
+						</Typography>
+						<Typography variant="h8" ml={1}>
+							onwards
+						</Typography>
+					</div>
 
-               <Typography
-                  mt={-1}
-                  mb={-1}
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{
-                     fontSize: "13px",
-                     display: "-webkit-box",
-                     overflow: "hidden",
-                     WebkitBoxOrient: "vertical",
-                     WebkitLineClamp: 3,
-                  }}
-               >
-                  {description}
-               </Typography>
-               <Stack direction="row" style={{ display: "flex" }}>
-                  <IconButton aria-label="Beds" sx={{ fontSize: "15px", color: "black" }}>
-                     <AirlineSeatIndividualSuiteIcon
-                        sx={{ marginRight: "4px", marginLeft: "-7px" }}
-                     />
-                     {noOfBeds}
-                  </IconButton>
-                  <IconButton aria-label="Beds" sx={{ fontSize: "15px", color: "black" }}>
-                     <AspectRatioIcon sx={{ marginRight: "4px" }} />
-                     {area} SqFt
-                  </IconButton>
-                  <IconButton aria-label="Beds" sx={{ fontSize: "15px", color: "black" }}>
-                     <StairsIcon sx={{ marginRight: "4px" }} />
-                     {floor}
-                  </IconButton>
-                  <IconButton aria-label="Beds" sx={{ fontSize: "15px", color: "black" }}>
-                     <BathtubIcon sx={{ marginRight: "4px" }} />
-                     {noOfBathrooms}
-                  </IconButton>
-               </Stack>
-            </CardContent>
-            <CardActions sx={{ marginTop: "-20px" }}>
-               <IconButton aria-label="add to favorites">
-                  <FavoriteIcon sx={{ color: "#F80066" }} />
-               </IconButton>
-               <IconButton aria-label="share">
-                  <ShareIcon sx={{ color: "#1c6dd0" }} />
-               </IconButton>
-               <div style={{ display: "flex", marginLeft: "6px", height: "40px" }}>
-                  <Button sx={{}} onClick={handleAgentModalOpen}>
-                     Agent
-                  </Button>
-                  <Button
-                     variant="outline-danger"
-                     onClick={handleOpen}
-                     style={{ marginLeft: "10px" }}
-                  >
-                     Decline
-                  </Button>
-               </div>
-            </CardActions>
-         </Card>
-      </div>
-   );
+					<Typography
+						mt={-1}
+						mb={-1}
+						variant="body2"
+						color="text.secondary"
+						sx={{
+							fontSize: "13px",
+							display: "-webkit-box",
+							overflow: "hidden",
+							WebkitBoxOrient: "vertical",
+							WebkitLineClamp: 3,
+						}}
+					>
+						{Property_Title}
+					</Typography>
+					<Stack direction="row" style={{ display: "flex" }}>
+						<IconButton
+							aria-label="Beds"
+							sx={{ fontSize: "15px", color: "black" }}
+						>
+							<AirlineSeatIndividualSuiteIcon
+								sx={{ marginRight: "4px", marginLeft: "-7px" }}
+							/>
+							{Bedrooms}
+						</IconButton>
+						<IconButton
+							aria-label="Beds"
+							sx={{ fontSize: "15px", color: "black" }}
+						>
+							<AspectRatioIcon sx={{ marginRight: "4px" }} />
+							{Unit_Builtup_Area} SqFt
+						</IconButton>
+						<IconButton
+							aria-label="Beds"
+							sx={{ fontSize: "15px", color: "black" }}
+						>
+							<StairsIcon sx={{ marginRight: "4px" }} />
+							{5}
+						</IconButton>
+						<IconButton
+							aria-label="Beds"
+							sx={{ fontSize: "15px", color: "black" }}
+						>
+							<BathtubIcon sx={{ marginRight: "4px" }} />
+							{No_of_Bathroom}
+						</IconButton>
+					</Stack>
+				</CardContent>
+				<CardActions sx={{ marginTop: "-20px" }}>
+					<IconButton aria-label="add to favorites">
+						<FavoriteIcon sx={{ color: "#F80066" }} />
+					</IconButton>
+					<IconButton aria-label="share">
+						<ShareIcon sx={{ color: "#1c6dd0" }} />
+					</IconButton>
+					<div style={{ display: "flex", marginLeft: "6px", height: "40px" }}>
+						<Button sx={{}} onClick={handleAgentModalOpen}>
+							Agent
+						</Button>
+						<Button
+							variant="outline-danger"
+							onClick={handleOpen}
+							style={{ marginLeft: "10px" }}
+						>
+							Decline
+						</Button>
+					</div>
+				</CardActions>
+			</Card>
+		</div>
+	);
 };
 
 export default NewCard;

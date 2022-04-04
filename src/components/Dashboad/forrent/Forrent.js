@@ -8,7 +8,7 @@ const Forrent = () => {
       <div>
          <div className="Postrequestsell">
             <div className="containerforsell">
-               <div className="mypostbgcontainer">
+               <div className="mypostbgcontainer" style={{ marginTop: "120px" }}>
                   <div className="mypostcontainer">
                      <h1>Rent Request</h1>
                      <div className="jobrequirements">

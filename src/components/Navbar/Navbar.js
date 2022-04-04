@@ -14,11 +14,11 @@ export default function ButtonAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" style = {{ "backgroundColor" : "#6600FF" }}>
+      <AppBar position="fixed" style = {{ "backgroundColor" : "#6600FF",  }}>
         <Toolbar>
 
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginTop: '10px' }}>
-          <img src="https://aaronz.co/static/media/logoWhite.3e2b20a0acc86074901868a49b85ca61.svg" alt="" />
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <img src="https://aaronz.co/static/media/logoWhite.3e2b20a0acc86074901868a49b85ca61.svg" alt=""  style = {{ "height": "50px", }} />
              
           </Typography>
           <Button color="inherit" onClick={() => { history.push('/login')  }}>Login</Button>
